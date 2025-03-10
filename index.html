@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <form action="">
+        <label for="name-input">Name:</label>
+        <input type="text" name="" id="name-input">
+        <br>
+        <label for="age-input">Age:</label>
+        <input type="number" name="" id="age-input">
+        <br>
+        <label for="">Class:</label>
+        <select onchange="selectionChanged()" name="" id="classSelector">
+            <option value="fighter">Fighter</option>
+            <option value="mage">Mage</option>
+            <option value="thief">Thief</option>
+        </select>
+        <div id="ChooseSpell" class="hide">
+            <br>
+            <label for="">Starting spell</label>
+            <br>
+            <input type="radio" name="spells" id=""> <label for="">Sleep</label>
+            <br>
+            <input type="radio" name="spells" id=""> <label for="">Charm Person</label>
+            <br>
+            <input type="radio" name="spells" id=""> <label for="">Magic Missiles</label>
+        </div>
+        <br>
+        <label for="">Have you signed the NDA?</label>
+        <input type="checkbox" name=" id">
+        <br>
+        <label for="">Do you agree to appear on promo videos</label>
+        <br>
+        <input type="radio" name="agree" id="agree"> <label for="agree">Yes</label>
+        <br>
+        <input type="radio" name="agree" id="disagree"> <label for="disagree">No</label>
+        <br>
+        <button type="button" onclick="handleSubmit(event)">Submit</button>
+    </form>
+
+        <div id="sheet" class="characterSheet">
+            <h2>Name: </h2>
+            <br>
+            <p id="name-output"></p>
+        </div>
+
+        <script src="code/code.js"></script>
+
+</body>
+</html>

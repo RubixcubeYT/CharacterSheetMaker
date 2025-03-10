@@ -1,0 +1,11 @@
+form{
+    background-color: antiquewhite;
+    border-style: double;
+    border-radius: 5px;
+    padding: 4%;
+}
+
+
+.hide{
+    display: none;
+}
