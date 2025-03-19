@@ -41,6 +41,24 @@
         <input type="radio" name="agree" id="disagree"> <label for="disagree">No</label>
         <br>
         <button type="button" onclick="handleSubmit(event)">Submit</button>
+
+        <label for="pointsSkill1">Skill 1:</label>
+ 
+        <input type="range" id="pointsSkill1" name="pointsSkill1" min="0" max="10" value="0" oninput="updatePoints('pointsSkill1')">
+        <span id="pointsSkill1Value">0</span>
+  <br>
+
+        <label for="pointsSkill2">Skill 2:</label>
+        <input type="range" id="pointsSkill2" name="pointsSkill2" min="0" max="10" value="0" oninput="updatePoints('pointsSkill2')">
+        <span id="pointsSkill2Value">0</span>
+  <br>
+
+ 
+        <label for="pointsSkill3">Skill 3:</label>
+        <input type="range" id="pointsSkill3" name="pointsSkill3" min="0" max="10" value="0" oninput="updatePoints('pointsSkill3')">
+        <span id="pointsSkill3Value">0</span>
+  <br>
+
     </form>
 
         <div id="sheet" class="characterSheet">
