@@ -1,10 +1,46 @@
-form{
+form {
     background-color: rgb(241, 209, 166);
     border-style: double;
     border-radius: 5px;
     padding: 4%;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+form button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+}
 
 .hide{
     display: none;

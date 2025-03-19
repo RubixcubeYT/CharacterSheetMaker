@@ -3,71 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Character Creation</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <form action="">
+    <form id="characterForm">
+        
         <label for="name-input">Name:</label>
-        <input type="text" name="" id="name-input">
+        <input type="text" id="name-input" placeholder="Enter your name">
         <br>
+        
         <label for="age-input">Age:</label>
-        <input type="number" name="" id="age-input">
+        <input type="number" id="age-input" placeholder="Enter your age">
         <br>
-        <label for="">Class:</label>
-        <select onchange="selectionChanged()" name="" id="classSelector">
+        
+        <label for="classSelector">Class:</label>
+        <select id="classSelector" onchange="selectionChanged()">
             <option value="fighter">Warrior</option>
             <option value="mage">Mage</option>
             <option value="thief">Thief</option>
         </select>
+
         <div id="ChooseSpell" class="hide">
             <br>
-            <label for="">Starting spell</label>
+            <label for="spell">Starting spell</label>
             <br>
-            <input type="radio" name="spells" id=""> <label for="">Fireball</label>
+            <input type="radio" name="spells" id="fireball"> <label for="fireball">Fireball</label>
             <br>
-            <input type="radio" name="spells" id=""> <label for="">Lightning Strike</label>
+            <input type="radio" name="spells" id="lightning-strike"> <label for="lightning-strike">Lightning Strike</label>
             <br>
-            <input type="radio" name="spells" id=""> <label for="">Invisibility</label>
+            <input type="radio" name="spells" id="invisibility"> <label for="invisibility">Invisibility</label>
         </div>
-        <br>
-        <label for="">Would you like to disable enemies?</label>
-        <input type="checkbox" name=" id">
-        <br>
-        <label for="">Do you agree to allow us to collect your data to improve your experience?</label>
-        <br>
-        <input type="radio" name="agree" id="agree"> <label for="agree">Yes</label>
-        <br>
-        <input type="radio" name="agree" id="disagree"> <label for="disagree">No</label>
-        <br>
-        <button type="button" onclick="handleSubmit(event)">Submit</button>
 
-        <label for="pointsSkill1">Skill 1:</label>
- 
-        <input type="range" id="pointsSkill1" name="pointsSkill1" min="0" max="10" value="0" oninput="updatePoints('pointsSkill1')">
+        <br>
+        
+        <label for="disable-enemies">Would you like to disable enemies?</label>
+        <input type="checkbox" id="disable-enemies">
+        <br>
+        
+        <label for="agree">Do you agree to allow us to collect your data?</label>
+        <br>
+        <input type="radio" name="agree" id="agree" value="Yes"> <label for="agree">Yes</label>
+        <br>
+        <input type="radio" name="agree" id="disagree" value="No"> <label for="disagree">No</label>
+        <br>
+
+        <label for="pointsSkill1">Strength:</label>
+        <input type="range" id="pointsSkill1" name="pointsSkill1" min="0" max="10" value="0" oninput="updatePoints()">
         <span id="pointsSkill1Value">0</span>
-  <br>
+        <br>
 
-        <label for="pointsSkill2">Skill 2:</label>
-        <input type="range" id="pointsSkill2" name="pointsSkill2" min="0" max="10" value="0" oninput="updatePoints('pointsSkill2')">
+        <label for="pointsSkill2">Stamina:</label>
+        <input type="range" id="pointsSkill2" name="pointsSkill2" min="0" max="10" value="0" oninput="updatePoints()">
         <span id="pointsSkill2Value">0</span>
-  <br>
+        <br>
 
- 
-        <label for="pointsSkill3">Skill 3:</label>
-        <input type="range" id="pointsSkill3" name="pointsSkill3" min="0" max="10" value="0" oninput="updatePoints('pointsSkill3')">
+        <label for="pointsSkill3">Mana:</label>
+        <input type="range" id="pointsSkill3" name="pointsSkill3" min="0" max="10" value="0" oninput="updatePoints()">
         <span id="pointsSkill3Value">0</span>
-  <br>
-
+        <br>
+        
+        <button type="button" onclick="handleSubmit(event)">Submit</button>
     </form>
 
-        <div id="sheet" class="characterSheet">
-            <h2>Name: </h2>
-            <br>
-            <p id="name-output"></p>
-        </div>
+    <div id="outputPage" class="characterSheet hide">
+        <h2>Your Character Summary:</h2>
 
-        <script src="code/code.js"></script>
+        <p><strong>Name:</strong> <span id="name-output"></span></p>
 
+        <p><strong>Age:</strong> <span id="age-output"></span></p>
+
+        <p><strong>Class:</strong> <span id="class-output"></span></p>
+
+        <p><strong>Starting Spell:</strong> <span id="spell-output"></span></p>
+
+        <p><strong>Disable Enemies:</strong> <span id="disable-enemies-output"></span></p>
+
+        <p><strong>Strength:</strong> <span id="pointsSkill1Output"></span></p>
+        <p><strong>Stamina:</strong> <span id="pointsSkill2Output"></span></p>
+        <p><strong>Mana:</strong> <span id="pointsSkill3Output"></span></p>
+
+        <p><strong>Remaining Points:</strong> <span id="remainingPointsOutput"></span></p>
+    </div>
+
+    <script src="code/code.js"></script>
 </body>
 </html>
